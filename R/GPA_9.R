@@ -1,4 +1,5 @@
-setwd("P:/My Documents/MANU/Hubei/Hupehsuchus_Filter/R")
+setwd("P:/My Documents/Github/hupehsuchus/R")
+
 
 library(geomorph)
 library(abind)
@@ -6,7 +7,6 @@ library(StereoMorph)
 library(Morpho)
 library(calibrate)
 source(".\\Utility.R")
-#library(concaveman)
 
 ###
 ### Reading landmarks
