@@ -2,7 +2,7 @@
 
 This folder contains the data and R scripts used in a study that re-tested the paper by Fang et al. (2023). The published data from the original study can reproduce the published plots but contains a large amount of unauthetic data points that do not fit the morphology of respective species and mislead PCA to give the results that support the point made by Fang et al. (2023).
 
-Fang et al., (2023) 
+Fang ZC, Li JL, Yan CB, Zou YR, Tian L, Zhao B, Benton MJ, Cheng L, Lai XL. 2023. First filter feeding in the Early Triassic: cranial morphological convergence between Hupehsuchus and baleen whales. BMC Ecology and Evolution 23:1–12. 
 https://doi.org/10.1186/s12862-023-02143-9
 
 # Primer
@@ -12,7 +12,7 @@ https://doi.org/10.1186/s12862-023-02143-9
     <li> Modify the first lines of the R scripts so that your working directory is specified there. </li>
     <li> To reproduce the analysis of Fang et al. (2023), run GPA_Fang_asis.R </li>
     <li> To plot the landmarks used by Fang et al. (2023), run Plot_FangEA.R </li>
-    <li> To run our preferred analysis using the 15 landmarks defined in our paper, run GPA_15.R </li>
+    <li> To run our preferred analysis based on the 15 landmarks defined in our paper, run GPA_15.R </li>
 </ol>
 
 # List of Directories
