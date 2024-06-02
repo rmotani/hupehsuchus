@@ -7,7 +7,6 @@ library(StereoMorph)
 library(Morpho)
 library(calibrate)
 source(".\\Utility.R")
-#library(concaveman)
 
 ###
 ### Species list from Fang et al.

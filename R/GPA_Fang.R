@@ -7,9 +7,6 @@ library(StereoMorph)
 library(Morpho)
 library(calibrate)
 source(".\\Utility.R")
-#library(car)
-#confidence.ellipse()
-#library(concaveman)
 
 ###
 ### Reading landmarks

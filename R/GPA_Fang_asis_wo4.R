@@ -7,7 +7,6 @@ library(StereoMorph)
 library(Morpho)
 library(calibrate)
 source(".\\Utility.R")
-#library(concaveman)
 
 ###
 ### Reading landmarks
@@ -21,22 +20,8 @@ DAT <- DAT[DAT$Species != "eueu",]
 
 rownames(DAT) <- fnames <- paste0(DAT$Genus,"_",DAT$Species)
 dat <- DAT[,sapply(DAT, FUN = is.numeric)]
-
 LMcoords <- arrayspecs(dat[,],9,2)
 dimnames(LMcoords) <- list(chars,c("X","Y"),fnames)
-
-# Cb_9St <- read.csv("Cb_9St.csv",row.names=1)
-# LMcoords <- abind(LMcoords,Cb_9St[,c(3,1)],along=3)
-# Cb_9Bo <- read.csv("Cb_9Bo.csv",row.names=1)
-# LMcoords <- abind(LMcoords,Cb_9Bo[,c(3,1)],along=3)
-# Hn_9St <- read.csv("Hn_9St.csv",row.names=1)
-# LMcoords <- abind(LMcoords,Hn_9St[,c(3,1)],along=3)
-# Hn_9Bo <- read.csv("Hn_9Bo.csv",row.names=1)
-# LMcoords <- abind(LMcoords,Hn_9Bo[,c(3,1)],along=3)
-# dimnames(LMcoords) <- list(chars,c("X","Y"),c(fnames,"Cb_9St","Cb_9Bo","Hn_9St","Hn_9Bo"))
-
-# fam <- c(CET$Family,"Cb_9St","Cb_9Bo","Hn_9St","Hn_9Bo")
-# cl2 <- c(CET$Clade2,"Ichthyosauromorpha","Ichthyosauromorpha","Ichthyosauromorpha","Ichthyosauromorpha")
 fam <- c(DAT$Family)
 cl2 <- c(DAT$Clade2)
 
@@ -49,8 +34,6 @@ cl2 <- c(DAT$Clade2)
 ##
 
 LMcoords2D <- -LMcoords
-# LMcoords2D[,1,] <- -LMcoords2D[,1,]
-# LMcoords2D[,2,] <- -LMcoords2D[,2,]
 gpa2 <- gpagen(LMcoords2D)
 shape.data <- gpa2$coords
 pdf(h=4.5, w=4, file="AllLM_Fang_asis_wo4.pdf")

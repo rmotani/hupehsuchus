@@ -7,7 +7,6 @@ library(StereoMorph)
 library(Morpho)
 library(calibrate)
 source(".\\Utility.R")
-#library(concaveman)
 
 ###
 ### Reading landmarks
@@ -15,10 +14,7 @@ source(".\\Utility.R")
 
 chars <- paste0("F-",seq(1,9))
 DAT <- read.csv("Fang_EA_2023_Hupehsuchus_Filter.csv")
-#CET <- DAT[DAT$Clade1 == "Cetacea" | DAT$Clade1 == "Hupehsuchia",]
 CET <- DAT[DAT$Clade1 == "Cetacea",]
-# CET <- CET[CET$Genus != "Physeter",]
-# CET <- CET[CET$Genus != "Kogia",]
 rownames(CET) <- fnames <- paste0(CET$Genus,"_",CET$Species)
 cet <- CET[,sapply(CET, FUN = is.numeric)]
 
@@ -50,8 +46,6 @@ fnames2 <- paste0(substr(CET$Genus,1,5),"_",substr(CET$Species,1,5))
 dimnames(LMcoords) <- list(chars,c("X","Y"),c(fnames2,"Cb_9St","Cb_9Bo","Hn_9St","Hn_9Bo"))
 
 LMcoords2D <- -LMcoords
-# LMcoords2D[,1,] <- -LMcoords2D[,1,]
-# LMcoords2D[,2,] <- -LMcoords2D[,2,]
 gpa2 <- gpagen(LMcoords2D)
 shape.data <- gpa2$coords
 pdf(h=4.5, w=4, file="AllLM_Fang_cetacea.pdf")

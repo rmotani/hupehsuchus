@@ -20,8 +20,6 @@ plotLD(LMcoords,file="LM_Fang__asis.pdf")
 ###
 
 CET <- DAT[DAT$Clade1 == "Cetacea",]
-#CET <- CET[CET$Genus != "Physeter",]
-#CET <- CET[CET$Genus != "Kogia",]
 rownames(CET) <- fnames <- paste0(CET$Genus,"_",CET$Species)
 nlevels(as.factor(CET$Family))
 nlevels(as.factor(CET$Genus))
@@ -48,7 +46,6 @@ setdiff(CET$Genus,taxa$Genus)
 ###
 
 fs.9 <- list.files("../3D_Cetacea_Principal/@o_fcsv",pattern=".fcsv")
-#chars.9 <-seq(1,9)
 chars.9 <- paste0("F-",seq(1,9))
 
 LMcoords.9 <- NULL

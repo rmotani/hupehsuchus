@@ -7,7 +7,6 @@ library(StereoMorph)
 library(Morpho)
 library(calibrate)
 source(".\\Utility.R")
-#library(concaveman)
 
 ###
 ### Reading landmarks
@@ -51,8 +50,6 @@ cl2 <- c(CET$Clade2,"Ichthyosauromorpha","Ichthyosauromorpha","Ichthyosauromorph
 ##
 
 LMcoords2D <- -LMcoords
-# LMcoords2D[,1,] <- -LMcoords2D[,1,]
-# LMcoords2D[,2,] <- -LMcoords2D[,2,]
 gpa2 <- gpagen(LMcoords2D)
 shape.data <- gpa2$coords
 pdf(h=4.5, w=4, file="AllLM_Fang_Cetacea_wo4.pdf")
