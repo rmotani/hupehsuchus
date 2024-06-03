@@ -1,6 +1,6 @@
 # hupehsuchus
 
-This folder contains the data and R scripts used in a study that re-tested the paper by Fang et al. (2023). The published data from the original study can reproduce the published plots but contains a large amount of unauthetic data points that do not fit the morphology of respective species and mislead PCA to give the results that support the point made by Fang et al. (2023).
+This folder contains the data and R scripts used in a study that re-tested the paper by Fang et al. (2023). The published data from the original study can reproduce the published plots but contains a large amount of unauthetic data points that do not fit the morphology of respective species and mislead PCA to support the point made by Fang et al. (2023). When using a new set of data sampled according to the definitions given by Fang et al., (2023), the outcome is completely different.
 
 Fang ZC, Li JL, Yan CB, Zou YR, Tian L, Zhao B, Benton MJ, Cheng L, Lai XL. 2023. First filter feeding in the Early Triassic: cranial morphological convergence between Hupehsuchus and baleen whales. BMC Ecology and Evolution 23:1–12. 
 https://doi.org/10.1186/s12862-023-02143-9
