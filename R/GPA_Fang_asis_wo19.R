@@ -16,7 +16,6 @@ chars <- paste0("F-",seq(1,9))
 DAT <- read.csv("Fang_EA_2023_Hupehsuchus_Filter.csv")
 DAT <- DAT[DAT$Genus != "Physeter",]
 DAT <- DAT[DAT$Genus != "Kogia",]
-DAT <- DAT[DAT$Species != "eueu",]
 rownames(DAT) <- fnames <- paste0(DAT$Genus,"_",DAT$Species)
 rmv <- c("Balaenoptera_borealis",
          "Megaptera_novaeangliae",
